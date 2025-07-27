@@ -1,0 +1,272 @@
+<!-- ======================================== -->
+<!-- PHẦN HTML: Cấu trúc nội dung website cá nhân -->
+<!-- ======================================== -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Nguyễn Quốc Quý | Trang Cá Nhân</title>
+ <!-- ======================================== -->
+ <!-- PHẦN CSS: Thiết kế giao diện, trình bày đẹp mắt -->
+ <!-- ======================================== -->
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: 'Poppins', sans-serif;
+ background: linear-gradient(to right, #afd1ec, #97a1f7);
+ color: #333;
+ }
+ header {
+ background: linear-gradient(135deg, #2996f0, #888aec);
+ color: white;
+ text-align: center;
+ padding: 60px 20px;
+ }
+ header h1 {
+ font-size: 2.5rem;
+ }
+ header p {
+  color: #65d493;
+ font-size: 1.2rem;
+ margin-top: 10px;
+ }
+ .container {
+ max-width: 900px;
+ margin: auto;
+ padding: 40px 20px;
+ }
+ .avatar-container {
+ display: flex;
+ justify-content: center;
+ margin-bottom: 30px;
+ }
+ .avatar {
+ width: 160px;
+ height: 160px;
+ border-radius: 50%;
+ object-fit: cover;
+ border: 5px solid #407dcc;
+ box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+ transition: border-color 0.3s ease;
+ }
+ section {
+ margin-bottom: 40px;
+ }
+ h2 {
+ color: #3f62a3;
+ border-left: 5px solid #4CAF50;
+ padding-left: 10px;
+ margin-bottom: 20px;
+ font-size: 1.5rem;
+ }
+ p, li {
+ font-size: 1.05rem;
+ line-height: 1.6;
+ }
+ ul {
+ list-style: circle inside;
+ }
+ a {
+ color: #305b9b;
+ text-decoration: none;
+ }
+ a:hover {
+ text-decoration: underline;
+ }
+ footer {
+ background-color: #778ef7;
+ text-align: center;
+ padding: 20px;
+ font-size: 0.9rem;
+ margin-top: 40px;
+ }
+ @media (max-width: 600px) {
+ header h1 {
+ font-size: 2rem;
+ }
+ .avatar {
+ width: 120px;
+ height: 120px;
+ }
+ }
+ /* Nút đổi slogan */
+ #changeSloganBtn {
+ margin-top: 20px;
+ padding: 10px 20px;
+ background: #ffffff;
+ color: #356c91;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-weight: bold;
+ transition: background 0.3s ease;
+ }
+ #changeSloganBtn:hover {
+ background: #7baef1;
+ }
+ /*Css cho footer*/
+ .footer-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #778ef7; /* Có thể chỉnh màu nền */
+  padding: 10px 0;
+  position: relative;
+}
+
+.footer-marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: footer-scroll 20s linear infinite;
+  font-size: 14px;
+  color: #333; /* chỉnh màu chữ nếu cần */
+}
+
+@keyframes footer-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 768px) {
+  .slogan,
+  #changeSloganBtn {
+    display: none;
+  }
+}
+ </style>
+</head>
+<body>
+ <!-- ======================================== -->
+ <!-- PHẦN HEADER: Tiêu đề website -->
+ <!-- ======================================== -->
+ <header>
+ <h1>Nguyễn Quốc Quý</h1>
+ <p class="slogan">Sinh viên ngành Công nghệ thông tin</p>
+ <p id="sloganTyping"></p>
+ <!-- Nút đổi slogan -->
+ <button id="changeSloganBtn">Đổi câu giới thiệu</button>
+ </header>
+ <!-- ======================================== -->
+ <!-- PHẦN NỘI DUNG CHÍNH -->
+ <!-- ======================================== -->
+ <div class="container">
+
+ <!-- ẢNH ĐẠI DIỆN -->
+ <div class="avatar-container">
+  <!-- https://www.vietnamworks.com/hrinsider/wp-content/uploads/2023/12/anh-den-ngau-012.jpg -->
+ <img
+src="https://cdn-media.sforum.vn/storage/app/media/wp-content/uploads/2023/11/avatar-vo-tri-thumbnail.jpg"
+alt="Ảnh đại diện" class="avatar" />
+ </div>
+<!-- GIỚI THIỆU BẢN THÂN -->
+ <section>
+ <h2>👋 Giới thiệu</h2>
+ <p style="text-align: justify;">Xin chào!
+Mình là sinh viên năm 1 tại Đại học Đại Nam, có hứng thú đặc biệt với lập trình web và xây dựng các sản phẩm số mang tính ứng dụng cao. 
+Mình luôn chủ động tìm kiếm cơ hội để va chạm thực tế, rèn luyện kỹ năng và cộng tác trong những dự án sáng tạo, có ý nghĩa</p>
+ </section>
+ <!-- KỸ NĂNG -->
+ <section>
+ <h2>🚀 Kỹ năng</h2>
+ <ul>
+ <li>Ngôn ngữ: HTML, CSS, JavaScript, Java</li>
+ <li>Framework: ReactJS, NextJS, Java Spring Boot</li>
+ <li>Công cụ: Git, VS Code, IntelliJ</li>
+ <li>Kỹ năng mềm: Làm việc nhóm, thuyết trình, quản lý thời gian</li>
+ </ul>
+ </section>
+ <!-- DỰ ÁN CÁ NHÂN -->
+ <h2>💻 Dự án cá nhân</h2>
+ <ul>
+ <li>Xây dựng ứng dụng chat - call cá nhân</li>
+ </ul>
+<h2>📚 Sở thích</h2>
+ <ul>
+ <li>Xem hoạt hình</li>
+ <li>Đi du lịch</li>
+ <li>Chơi với con</li>
+ <li>Nói chuyện với vợ</li>
+ </ul>
+<h2>📖 Câu nói yêu thích</h2>
+ <ul>
+ <li>"Believe in life."</li>
+ </ul>
+ <!-- LIÊN HỆ -->
+ <section>
+ <h2>📬 Liên hệ</h2>
+ <p>Email: <a href="mailto:quynq250194@ondnu.edu.vn">quynq250194@ondnu.edu.vn</a></p>
+ <p>Facebook: <a href="https://www.facebook.com/bubu.lala.125"
+target="_blank">facebook.com/bubu.lala.125</a></p>
+ </section>
+ </div>
+ <!-- ======================================== -->
+ <!-- PHẦN FOOTER: Chân trang -->
+ <!-- ======================================== -->
+ <footer class="footer-marquee">
+ <p>&copy; 2025 Nguyễn Quốc Quý. Thiết kế bởi LABUBU.</p>
+ </footer>
+ <!-- ======================================== -->
+ <!-- PHẦN JAVASCRIPT: Thêm tương tác cơ bản -->
+ <!-- ======================================== -->
+ <script>
+ // 1. Đổi slogan khi bấm nút
+ const slogan = document.querySelector('header p');
+ const changeSloganBtn = document.getElementById('changeSloganBtn');
+ const slogans = [
+ 'Sinh viên ngành Công nghệ thông tin',
+ 'Học tập mỗi ngày – Sẵn sàng cho mọi cơ hội ngày mai!',
+ ];
+ let sloganIndex = 0;
+ changeSloganBtn.addEventListener('click', () => {
+ sloganIndex = (sloganIndex + 1) % slogans.length;
+ slogan.textContent = slogans[sloganIndex];
+ });
+ // 2. Tự động đổi slogan mỗi 5 giây
+setInterval(() => {
+  sloganIndex = (sloganIndex + 1) % slogans.length;
+  slogan.textContent = slogans[sloganIndex];
+}, 5000); // đổi sau mỗi 5000ms = 5 giây
+// 3. Thêm phần chạy chữ 
+const sloganTypings = [
+  'Chậm mà chắc, em đang tiến về phía trước.',
+  'Skill còn đang update, nhưng tinh thần thì luôn full-stack sẵn sàng!'
+];
+
+let sloganTypingIndex = 0;
+let charIndex = 0;
+const sloganElement = document.getElementById('sloganTyping');
+
+function typeSlogan() {
+  const currentSlogan = sloganTypings[sloganTypingIndex];
+  sloganElement.textContent = currentSlogan.slice(0, charIndex++);
+  if (charIndex <= currentSlogan.length) {
+    setTimeout(typeSlogan, 80); // tốc độ đánh chữ
+  } else {
+    setTimeout(() => {
+      sloganTypingIndex = (sloganTypingIndex + 1) % sloganTypings.length;
+      charIndex = 0;
+      typeSlogan();
+    }, 3000); // thời gian giữ slogan sau khi gõ xong
+  }
+}
+
+typeSlogan();
+
+ // 4. Đổi màu viền avatar khi hover vào ảnh
+ const avatar = document.querySelector('.avatar');
+ avatar.addEventListener('mouseenter', () => {
+ avatar.style.borderColor = '#578dd4'; // Đổi màu viền sang cam
+ });
+ avatar.addEventListener('mouseleave', () => {
+ avatar.style.borderColor = '#377bd3'; // Trả lại màu xanh lá cũ
+ });
+ </script>
+</body>
+</html>
